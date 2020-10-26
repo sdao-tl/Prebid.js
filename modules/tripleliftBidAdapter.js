@@ -13,10 +13,6 @@ export const tripleliftAdapterSpec = {
   code: BIDDER_CODE,
   supportedMediaTypes: [BANNER, VIDEO],
   isBidRequestValid: function (bid) {
-    if (bid.mediaTypes.video) {
-      let video = _getORTBVideo(bid);
-      if (!video.w || !video.h) return false;
-    }
     return typeof bid.params.inventoryCode !== 'undefined';
   },
 
