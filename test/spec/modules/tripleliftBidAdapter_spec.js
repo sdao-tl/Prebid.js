@@ -171,7 +171,10 @@ describe('triplelift adapter', function () {
           userId: {},
           schain,
         },
+<<<<<<< HEAD
         // banner and outstream video
+=======
+>>>>>>> fb958509e90c61c5c8861ff822f7702a847088ed
         {
           bidder: 'triplelift',
           params: {
@@ -204,6 +207,7 @@ describe('triplelift adapter', function () {
           auctionId: '1d1a030790a475',
           userId: {},
           schain,
+<<<<<<< HEAD
         },
         // banner and incomplete video
         {
@@ -338,6 +342,8 @@ describe('triplelift adapter', function () {
           auctionId: '1d1a030790a475',
           userId: {},
           schain,
+=======
+>>>>>>> fb958509e90c61c5c8861ff822f7702a847088ed
         }
       ];
 
@@ -402,6 +408,7 @@ describe('triplelift adapter', function () {
       expect(payload.imp[1].tagid).to.equal('insteam_test');
       expect(payload.imp[1].floor).to.equal(1.0);
       expect(payload.imp[1].video).to.exist.and.to.be.a('object');
+<<<<<<< HEAD
       // banner and outstream video
       expect(payload.imp[2]).to.not.have.property('video');
       expect(payload.imp[2]).to.have.property('banner');
@@ -422,6 +429,12 @@ describe('triplelift adapter', function () {
       expect(payload.imp[6]).to.not.have.property('video');
       expect(payload.imp[6]).to.have.property('banner');
       expect(payload.imp[6].banner.format).to.deep.equal([{w: 300, h: 250}, {w: 300, h: 600}]);
+=======
+
+      expect(payload.imp[2]).to.not.have.property('video');
+      expect(payload.imp[2]).to.have.property('banner');
+      expect(payload.imp[2].banner.format).to.deep.equal([{w: 300, h: 250}, {w: 300, h: 600}]);
+>>>>>>> fb958509e90c61c5c8861ff822f7702a847088ed
     });
 
     it('should add tdid to the payload if included', function () {
